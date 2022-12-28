@@ -73,7 +73,85 @@
             </ul>
         </div>
 	<!-- end slider -->
- 
+
+    <section class="aboutUs">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="aligncenter"><h2 class="aligncenter">COTIZADOR</h2>Elije tu máquina favorita y envíanos una captura al nuestra cuenta de <a target="_blank" href="https://wa.link/b4a3i1">Whatsapp Business</a>.</div>
+                    <br/>
+                </div>
+            </div>	
+        </div>
+    
+        <div id="unity-container" class="unity-desktop">
+            <div id="unity-loading-bar">
+                <div id="unity-logo"></div>
+                <div id="unity-progress-bar-empty">
+                  <div id="unity-progress-bar-full"></div>
+                </div>
+              </div>
+              <div id="unity-footer">
+                <div id="unity-webgl-logo"></div>
+                <div id="unity-fullscreen-button"></div>
+                <div id="unity-build-title"></div>
+              </div>
+            <canvas id="unity-canvas"></canvas>
+            <div id="unity-mobile-warning">
+              Desarrollado por RetroAntena.
+            </div>
+          </div>
+          <script>
+            var buildUrl = "Build";
+            var loaderUrl = buildUrl + "/javier-naranjo.github.io.loader.js";
+            var config = {
+              dataUrl: buildUrl + "/javier-naranjo.github.io.data",
+              frameworkUrl: buildUrl + "/javier-naranjo.github.io.framework.js",
+              codeUrl: buildUrl + "/javier-naranjo.github.io.wasm",
+              streamingAssetsUrl: "StreamingAssets",
+              companyName: "DefaultCompany",
+              productName: "Bartop",
+              productVersion: "0.1",
+            };
+      
+            var container = document.querySelector("#unity-container");
+            var canvas = document.querySelector("#unity-canvas");
+            var loadingBar = document.querySelector("#unity-loading-bar");
+            var progressBarFull = document.querySelector("#unity-progress-bar-full");
+            var fullscreenButton = document.querySelector("#unity-fullscreen-button");
+            var mobileWarning = document.querySelector("#unity-mobile-warning");
+      
+            if (/iPhone|iPad|iPod|Android/i.test(navigator.userAgent)) {
+              container.className = "unity-mobile";
+              config.devicePixelRatio = 1;
+              mobileWarning.style.display = "block";
+              setTimeout(() => {
+                mobileWarning.style.display = "none";
+              }, 1000);
+            } else {
+              canvas.style.width = "640px";
+              canvas.style.height = "480px";
+            }
+            loadingBar.style.display = "block";
+      
+            var script = document.createElement("script");
+            script.src = loaderUrl;
+            script.onload = () => {
+              createUnityInstance(canvas, config, (progress) => {
+                progressBarFull.style.width = 100 * progress + "%";
+              }).then((unityInstance) => {
+                loadingBar.style.display = "none";
+                fullscreenButton.onclick = () => {
+                  unityInstance.SetFullscreen(1);
+                };
+              }).catch((message) => {
+                alert(message);
+              });
+            };
+            document.body.appendChild(script);
+          </script>
+        </section>
+	
 	</section>
 	<section class="txt-area">
 	<div class="container">
@@ -84,11 +162,8 @@
 		</div>
 	</div>
 	</section>
-	
-	
-	<section id="services">
-	
-	
+
+	<section id="services">	
 	<div class="container">
 		<div class="row">
                 <div class="features">
@@ -168,93 +243,13 @@
 	 
 
 	</div>
-	
 	</section>
-	
-		<section class="aboutUs">
-	<div class="container">
-		<div class="row">
-			<div class="col-md-12">
-				<div class="aligncenter"><h2 class="aligncenter">COTIZADOR</h2>Elije tu máquina favorita y envíanos una captura al nuestra cuenta de <a target="_blank" href="https://wa.link/b4a3i1">Whatsapp Business</a>.</div>
-				<br/>
-			</div>
-		</div>	
-	</div>
-
-    <div id="unity-container" class="unity-desktop">
-        <div id="unity-loading-bar">
-            <div id="unity-logo"></div>
-            <div id="unity-progress-bar-empty">
-              <div id="unity-progress-bar-full"></div>
-            </div>
-          </div>
-          <div id="unity-footer">
-            <div id="unity-webgl-logo"></div>
-            <div id="unity-fullscreen-button"></div>
-            <div id="unity-build-title"></div>
-          </div>
-        <canvas id="unity-canvas"></canvas>
-        <div id="unity-mobile-warning">
-          Desarrollado por RetroAntena.
-        </div>
-      </div>
-      <script>
-        var buildUrl = "Build";
-        var loaderUrl = buildUrl + "/javier-naranjo.github.io.loader.js";
-        var config = {
-          dataUrl: buildUrl + "/javier-naranjo.github.io.data",
-          frameworkUrl: buildUrl + "/javier-naranjo.github.io.framework.js",
-          codeUrl: buildUrl + "/javier-naranjo.github.io.wasm",
-          streamingAssetsUrl: "StreamingAssets",
-          companyName: "DefaultCompany",
-          productName: "Bartop",
-          productVersion: "0.1",
-        };
-  
-        var container = document.querySelector("#unity-container");
-        var canvas = document.querySelector("#unity-canvas");
-        var loadingBar = document.querySelector("#unity-loading-bar");
-        var progressBarFull = document.querySelector("#unity-progress-bar-full");
-        var fullscreenButton = document.querySelector("#unity-fullscreen-button");
-        var mobileWarning = document.querySelector("#unity-mobile-warning");
-  
-        if (/iPhone|iPad|iPod|Android/i.test(navigator.userAgent)) {
-          container.className = "unity-mobile";
-          config.devicePixelRatio = 1;
-          mobileWarning.style.display = "block";
-          setTimeout(() => {
-            mobileWarning.style.display = "none";
-          }, 1000);
-        } else {
-          canvas.style.width = "640px";
-          canvas.style.height = "480px";
-        }
-        loadingBar.style.display = "block";
-  
-        var script = document.createElement("script");
-        script.src = loaderUrl;
-        script.onload = () => {
-          createUnityInstance(canvas, config, (progress) => {
-            progressBarFull.style.width = 100 * progress + "%";
-          }).then((unityInstance) => {
-            loadingBar.style.display = "none";
-            fullscreenButton.onclick = () => {
-              unityInstance.SetFullscreen(1);
-            };
-          }).catch((message) => {
-            alert(message);
-          });
-        };
-        document.body.appendChild(script);
-      </script>
-
-
-	</section>
-	<section id='events'>
+    
+	<section id='events' class="events">
 	<div class="container">
 	<div class="row">
 			<div class="col-md-12">
-				<div class="aligncenter"><h2 class="aligncenter">Nuestras Máquinas</h2>Tienen la mejor calidad, garantizada por nuestro equipo de ingenieros que buscan ofrecer siempre la mejor experiencia.</div>
+				<div class="aligncenter"><h2 class="aligncenter">QUE DICEN DE NOSOTROS:</h2>Tienen la mejor calidad, garantizada por nuestro equipo de ingenieros que buscan ofrecer siempre la mejor experiencia.</div>
 				<br>
 			</div>
 		</div>
@@ -263,11 +258,7 @@
                     <div class="post3">
                         <img src="img/e1.png" alt="">
                         <a href="#">
-                            <time datetime="2015-03-01">
-                                <span class="year">2015</span>
-                                <span class="month">Feb</span>
-                            </time>
-                            <p>Cliente Satisfecho.</p>
+                            <p>Cliente Satisfecho. Máquina Bartop con diseño "Donkey Kong"</p>
                         </a>
                     </div>
                 </div>
@@ -275,11 +266,7 @@
                     <div class="post3">
                         <img src="img/e2.png" alt="">
                         <a href="#">
-                            <time datetime="2019-03-01">
-                                <span class="year">2019</span>
-                                <span class="month">March</span>
-                            </time>
-                            <p>Cliente Satisfecho.</p>
+                            <p>Cliente Satisfecho. Máquinas Bartop con pantallas de 22".</p>
                         </a>
                     </div>
                 </div>
@@ -287,11 +274,7 @@
                     <div class="post3">
                         <img src="img/e3.png" alt="">
                         <a href="#">
-                            <time datetime="2015-03-01">
-                                <span class="year">2015</span>
-                                <span class="month">April</span>
-                            </time>
-                            <p>Cliente Satisfecho.</p>
+                            <p>Cliente Satisfecho. Máquina Bartop con fichero para negocio.</p>
                         </a>
                     </div>
                 </div>
