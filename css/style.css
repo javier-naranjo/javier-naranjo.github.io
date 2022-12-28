@@ -291,7 +291,7 @@ header ul.nav li ul li ul {
   content:none;
 }
 .navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:hover, .navbar-default .navbar-nav>.active>a:focus {
-color: #F58A2E;
+color: #2e56f5;
 }
 .navbar-default .navbar-nav>li>a:hover, .navbar-default .navbar-nav>li>a:focus {
 color: #383838;
@@ -445,7 +445,7 @@ margin: auto;
 }
 .aboutUs{
 padding:40px 0 0;
-background: #F58A2E;
+background: #2a397d;
 color: #fff;
 }
 .aboutUs h2, .aboutUs h4{
@@ -1364,7 +1364,7 @@ ul.social-network li {
     bottom:0px;
     right:20px;
 	
-    background: #CF6A14;
+    background: #1491cf;
 	
 }
 
