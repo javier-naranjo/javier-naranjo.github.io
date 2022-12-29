@@ -76,8 +76,16 @@
 	max-height: 100%;
 }
 
-#fancybox-loading, .fancybox-close, .fancybox-prev span, .fancybox-next span {
+#fancybox-loading, .fancybox-close {
 	background-image: url('fancybox_sprite.png') !important;
+}
+
+.fancybox-next span{
+	background-image: url('fancybox_next.png') !important;
+}
+
+.fancybox-prev span{
+	background-image: url('fancybox_prev.png') !important;
 }
 
 #fancybox-loading {
@@ -143,7 +151,7 @@
 
 .fancybox-prev,
 .fancybox-prev span {
-	left: 0;
+	left: 10;
 }
 
 .fancybox-next,

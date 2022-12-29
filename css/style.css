@@ -4,7 +4,7 @@ Note:
 Licence under Creative Commons Attribution 3.0  
 -------------------------------------------------------*/
 
-@import url('http://fonts.googleapis.com/css?family=Noto+Serif:400,400italic,700|Open+Sans:400,600,700'); 
+@import url('https://fonts.googleapis.com/css?family=Noto+Serif:400,400italic,700|Open+Sans:400,600,700'); 
 @import url('font-awesome.css');  
 @import url('animate.css');
 
@@ -18,6 +18,10 @@ body {
 
 a:active {
 	outline:0;
+}
+
+.logoAbajo{
+	max-width: 200px;
 }
 
 .clear {
@@ -611,7 +615,7 @@ position: relative;
 margin: 0;
 padding: 0;
 /* color: #F58A2E; */
-background: #E4E4E4;  margin-top: 3px;  
+background: #adaeb3;  margin-top: 3px;  
 padding-top: 8px;
 /* border: 1px solid #383838; */
 }
@@ -1549,20 +1553,20 @@ width: 89%;
 	transition: all 0.25s;
 }
 .list2 li a:hover {
-	color: #f2a23a;
+	color: #3a50f2;
 }
 .list2 li:before {
 	content: "\f0a9";
 	font-family: FontAwesome;
 	margin-right: 6px;
-	color: #f2a23a;
+	color: #3d3af2;
 	font-size: 14px;
 	line-height: 30px;
 	font-size: 16px;
 }
 .fancybox-title-inside-wrap {
   padding: 3px 30px 6px;
-  background: #61B331;
+  background: #0000009e;
 }
 .fancybox-nav span { 
   background: transparent;
@@ -1583,6 +1587,10 @@ width: 89%;
   margin-right: 0px;
 }
 
+label[for=message]{
+    margin-bottom: 0;
+}
+
 .contact textarea{
   background: #fff;
   color: #000;
@@ -1593,12 +1601,13 @@ width: 89%;
   height: 150px;
 } 
 .contact .submit {
-  background: #F69745; 
+  background: #383fa8; 
   color: #fff;
   font-size: 16px;
   font-weight: 400;
   text-align: center;
-  margin: 0px;
+  display: block;
+  margin-bottom: 2rem;
   border: none !important;
   border-radius: 0;
   float: left; 
@@ -1661,7 +1670,7 @@ width: 89%;
 @media (max-width: 767px) {
 .navbar-default .navbar-collapse {
   border-color: none;
-  background: #F58A2E;
+  background: #30478c;
 }
 .navbar-default .navbar-toggle .icon-bar {
 background-color: #FFF;
@@ -1679,7 +1688,7 @@ border-color: rgba(255, 255, 255, 0.58);
 margin-top: 15px;
 }
 .navbar-toggle { 
-  background-color: rgb(245, 138, 46);
+  background-color: #30478c;
   background-image: none;
   border: 0;
   border-radius: 0;

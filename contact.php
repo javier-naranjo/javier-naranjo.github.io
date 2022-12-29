@@ -12,15 +12,15 @@ $comment = ($_GET['comment']) ?$_GET['comment'] : $_POST['comment'];
 if ($_POST) $post=1;
 
 //Simple server side validation for POST data, of course, you should validate the email
-if (!$name) $errors[count($errors)] = 'Please enter your name.';
-if (!$email) $errors[count($errors)] = 'Please enter your email.'; 
-if (!$comment) $errors[count($errors)] = 'Please enter your message.'; 
+if (!$name) $errors[count($errors)] = 'Por favor ingresa tu nombre.';
+if (!$email) $errors[count($errors)] = 'Por favor ingresa tu email.'; 
+if (!$comment) $errors[count($errors)] = 'Por favor ingresa tu mensaje.'; 
 
 //if the errors array is empty, send the mail
 if (!$errors) {
 
 	//recipient - replace your email here
-	$to = 'samson3d@gmail.com';	
+	$to = 'soporte@retroantena.tk';	
 	//sender - from the form
 	$from = $name . ' <' . $email . '>';
 	
