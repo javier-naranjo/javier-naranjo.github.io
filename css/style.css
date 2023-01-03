@@ -856,7 +856,7 @@ color: #fff;
 text-align: center;
 border-radius: 50%;
 margin-left: 6px;
-background: #F58A2E;
+background: #2e60f5;
 }  
 .progress.pb-sm {
 height: 6px!important;
@@ -950,12 +950,12 @@ blockquote cite a:visited 				{ color:#555; }
 
 /* --- button --- */
 .btn{text-align: center;
-background: #F58A2E;
+background: #2e60f5;
 color: #fff;
 border-radius: 0;padding: 12px 22px;border: 0;}
 .btn-theme {
 	color: #fff;
-	background: rgba(245, 138, 46, 1);
+	background: rgb(46, 122, 245);
 	border: 0;
 	padding: 12px 30px;
 	font-weight: bold;
